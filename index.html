@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flappy Bird</title>
-    <link rel="icon" href="../images/bird_1-a.png" />
+    <link rel="icon" href="./images/bird_1-a.png" />
     <style>
       :root {
         --pipeColor: radial-gradient(rgb(240, 161, 97) 50%, rgb(139, 96, 1));
@@ -21,7 +21,7 @@
       .background {
         height: 100vh;
         width: 100vw;
-        background: url(../images/background_1.jpg) no-repeat center center
+        background: url(./images/background_1.jpg) no-repeat center center
           fixed;
         background-size: cover;
       }
@@ -192,17 +192,17 @@
     <div id="settingsModal">
       <h2>Choose Background</h2>
       <div class="option-grid bg-grid">
-        <img src="../images/background_1.jpg" data-bg="1" />
-        <img src="../images/background_2.png" data-bg="2" />
-        <img src="../images/background_3.png" data-bg="3" />
-        <img src="../images/background_4.png" data-bg="4" />
+        <img src="./images/background_1.jpg" data-bg="1" />
+        <img src="./images/background_2.png" data-bg="2" />
+        <img src="./images/background_3.png" data-bg="3" />
+        <img src="./images/background_4.png" data-bg="4" />
       </div>
 
       <h2>Choose Bird</h2>
       <div class="option-grid bird-grid">
-        <img src="../images/bird_3-a.png" data-bird="1" />
-        <img src="../images/bird_2-a.png" data-bird="2" />
-        <img src="../images/bird_1-a.png" data-bird="3" />
+        <img src="./images/bird_3-a.png" data-bird="1" />
+        <img src="./images/bird_2-a.png" data-bird="2" />
+        <img src="./images/bird_1-a.png" data-bird="3" />
       </div>
 
       <p>🏆 Best Score: <span id="bestScore">0</span></p>
@@ -210,7 +210,7 @@
     </div>
 
     <img
-      src="../images/bird_3-a.png"
+      src="./images/bird_3-a.png"
       alt="invalid-img"
       class="bird"
       id="bird-1"
@@ -295,19 +295,19 @@
         let pipeColor = "";
 
         if (currentBg == "1") {
-          bgDiv.style.backgroundImage = "url('../images/background_1.jpg')";
+          bgDiv.style.backgroundImage = "url('./images/background_1.jpg')";
           pipeColor = "radial-gradient(rgb(240,161,97) 50%,rgb(139,96,1))";
         }
         if (currentBg == "2") {
-          bgDiv.style.backgroundImage = "url('../images/background_2.png')";
+          bgDiv.style.backgroundImage = "url('./images/background_2.png')";
           pipeColor = "radial-gradient(rgb(97 240 100) 50%, rgb(5 139 1))";
         }
         if (currentBg == "3") {
-          bgDiv.style.backgroundImage = "url('../images/background_3.png')";
+          bgDiv.style.backgroundImage = "url('./images/background_3.png')";
           pipeColor = "radial-gradient(rgb(219 113 174) 50%, rgb(133 70 106))";
         }
         if (currentBg == "4") {
-          bgDiv.style.backgroundImage = "url('../images/background_4.png')";
+          bgDiv.style.backgroundImage = "url('./images/background_4.png')";
           pipeColor = "radial-gradient(rgb(87 36 157) 50%, rgb(38 20 73))";
         }
 
@@ -315,9 +315,9 @@
         document.documentElement.style.setProperty("--pipeColor", pipeColor);
 
         // bird selection
-        if (currentBird == "1") img.src = "../images/bird_3-a.png";
-        if (currentBird == "2") img.src = "../images/bird_2-a.png";
-        if (currentBird == "3") img.src = "../images/bird_1-a.png";
+        if (currentBird == "1") img.src = "./images/bird_3-a.png";
+        if (currentBird == "2") img.src = "./images/bird_2-a.png";
+        if (currentBird == "3") img.src = "./images/bird_1-a.png";
       }
 
       // click select highlight
@@ -411,13 +411,13 @@
           document.addEventListener("keydown", (e) => {
             if (e.key == " ") {
               if (currentBird == 1) {
-                img.src = "../images/bird_3-a.png";
+                img.src = "./images/bird_3-a.png";
               }
               if (currentBird == 2) {
-                img.src = "../images/bird_2-a.png";
+                img.src = "./images/bird_2-a.png";
               }
               if (currentBird == 3) {
-                img.src = "../images/bird_1-a.png";
+                img.src = "./images/bird_1-a.png";
               }
               bird_dy = -7.6;
             }
@@ -425,13 +425,13 @@
           document.addEventListener("keyup", (e) => {
             if (e.key == " ") {
               if (currentBird == 1) {
-                img.src = "../images/bird_3-b.png";
+                img.src = "./images/bird_3-b.png";
               }
               if (currentBird == 2) {
-                img.src = "../images/bird_2-b.png";
+                img.src = "./images/bird_2-b.png";
               }
               if (currentBird == 3) {
-                img.src = "../images/bird_1-b.png";
+                img.src = "./images/bird_1-b.png";
               }
             }
           });
